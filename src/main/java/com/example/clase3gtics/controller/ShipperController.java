@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 import java.util.Optional;
@@ -29,14 +30,24 @@ public class ShipperController {
         return "shipper/list";
     }
 
+    @PostMapping("/buscarTransportista")
+    public String buscarTransportista(Model model,
+                                      @RequestParam("searchText") String searchText) {
+
+        List<Shipper> shippers = shipperRepository.buscarPorNombreParcial(searchText);
+        model.addAttribute("shipperList",shippers);
+        return "shipper/list";
+    }
+
     @GetMapping("/new")
     public String nuevoTransportistaFrm() {
         return "shipper/newFrm";
     }
 
     @PostMapping("/save")
-    public String guardarNuevoTransportista(Shipper shipper) {
+    public String guardarNuevoTransportista(Shipper shipper, RedirectAttributes attributes) {
         shipperRepository.save(shipper);
+        attributes.addFlashAttribute("msg", "Transportista creado exitosamente");
         return "redirect:/shipper/list";
     }
 
