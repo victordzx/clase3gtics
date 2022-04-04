@@ -2,6 +2,7 @@ package com.example.clase3gtics.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
@@ -14,5 +15,11 @@ public class HomeController {
     @GetMapping("/2")
     public String inde2x(){
         return "index";
+    }
+
+    @GetMapping("/hola")
+    @ResponseBody
+    public String hola(){
+        return "Percy dice hola";
     }
 }
