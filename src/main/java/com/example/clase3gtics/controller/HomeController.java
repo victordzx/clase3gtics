@@ -26,4 +26,11 @@ public class HomeController {
     public String index3(){
         return "index";
     }
+
+    @GetMapping("/hola")
+    @ResponseBody
+    public String hola(){
+        return "Percy dice hola";
+    }
+
 }
