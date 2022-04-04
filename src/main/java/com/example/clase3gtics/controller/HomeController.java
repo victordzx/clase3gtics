@@ -15,4 +15,10 @@ public class HomeController {
     public String inde2x(){
         return "index";
     }
+    
+    
+    @GetMapping("/3")
+    public String index3(){
+        return "index";
+    }
 }
