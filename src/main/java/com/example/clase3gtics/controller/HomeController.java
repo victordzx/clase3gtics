@@ -17,9 +17,15 @@ public class HomeController {
         return "index";
     }
 
+    @GetMapping("/3")
+    public String index3(){
+        return "index";
+    }
+
     @GetMapping("/hola")
     @ResponseBody
     public String hola(){
         return "Percy dice hola";
     }
+
 }
