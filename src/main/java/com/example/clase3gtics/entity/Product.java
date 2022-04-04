@@ -7,6 +7,10 @@ import java.math.BigDecimal;
  * @entidad: producto
  * @Author: Stuardo
  */
+/**
+ * @Prueba: 4-04-2022
+ * @Author: Cuevita
+ */
 @Entity
 @Table(name = "products")
 public class Product {

@@ -20,4 +20,10 @@ public class HomeController {
     public String index4(){
         return "index";
     }
+
+
+    @GetMapping("/3")
+    public String index3(){
+        return "index";
+    }
 }
