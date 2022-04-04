@@ -10,4 +10,9 @@ public class HomeController {
     public String index(){
         return "index";
     }
+
+    @GetMapping("/2")
+    public String inde2x(){
+        return "index";
+    }
 }

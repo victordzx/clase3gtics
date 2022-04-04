@@ -3,6 +3,10 @@ package com.example.clase3gtics.entity;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
+/**
+ * @entidad: producto
+ * @Author: Stuardo
+ */
 @Entity
 @Table(name = "products")
 public class Product {
