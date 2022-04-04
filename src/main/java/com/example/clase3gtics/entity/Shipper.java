@@ -1,7 +1,10 @@
 package com.example.clase3gtics.entity;
 
 import javax.persistence.*;
-
+/**
+ * @entidad: shipper
+ * @Author: Stuardo
+ */
 @Entity
 @Table(name = "shippers")
 public class Shipper {
