@@ -49,10 +49,6 @@ public class ShipperController {
     public String guardarNuevoTransportista(Shipper shipper, RedirectAttributes attributes) {
         shipperRepository.save(shipper);
         attributes.addFlashAttribute("msg", "Transportista creado exitosamente");
-        Shipper shipper3= new Shipper();
-        shipper3.setCompanyname("nombre Prueba");
-        shipper3.setPhone("999999999");
-        attributes.addFlashAttribute("TransportistaPrueba",shipper3);
        return "redirect:/shipper/list";
     }
 

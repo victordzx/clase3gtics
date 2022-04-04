@@ -1,9 +1,6 @@
 package com.example.clase3gtics.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "region")
@@ -31,5 +28,4 @@ public class Region {
         this.id = id;
     }
 
-    //TODO Reverse Engineering! Migrate other columns to the entity
 }
