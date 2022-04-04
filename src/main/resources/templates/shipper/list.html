@@ -15,6 +15,7 @@
                 <h1 class="pb-2 border-bottom">Lista Transportistas</h1>
                 <a class="btn btn-primary mt-4 mb-4" th:href="@{'/shipper/new'}">Nuevo Transportista</a>
                 <div class="alert alert-success" th:text="${msg}" th:if="${msg != null}"></div>
+                <div class="alert alert-warning" th:if="${TransportistaPrueba != null}" th:text="${TransportistaPrueba.getCompanyname()}"></div>
                 <form class="input-group mb-3" method="post" th:action="@{/shipper/buscarTransportista}">
                     <input type="text" class="form-control" placeholder="Buscar Transportista" name="searchText">
                     <a class="btn btn-outline-danger" th:href="@{/shipper}"><i class="bi bi-x-circle"></i></a>

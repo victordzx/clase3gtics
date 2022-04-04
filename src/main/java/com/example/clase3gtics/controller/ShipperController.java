@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,6 +49,9 @@ public class ShipperController {
     public String guardarNuevoTransportista(Shipper shipper, RedirectAttributes attributes) {
         shipperRepository.save(shipper);
         attributes.addFlashAttribute("msg", "Transportista creado exitosamente");
+        Shipper shipper1 = new Shipper();
+        shipper1.setCompanyname("nombre Prueba");
+        attributes.addFlashAttribute("TransportistaPrueba",shipper1);
         return "redirect:/shipper/list";
     }
 
@@ -74,6 +78,11 @@ public class ShipperController {
 
         if (optShipper.isPresent()) {
             shipperRepository.deleteById(id);
+            /*ArrayList<Integer> listaBorra = new ArrayList<>();
+            listaBorra.add(1);
+            listaBorra.add(2);
+            shipperRepository.deleteAllById(listaBorra);*/
+
         }
         return "redirect:/shipper/list";
 
