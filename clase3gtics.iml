@@ -16,7 +16,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="clase3gtics" />
-          <factory-entry name="entityManagerFactory" value="97e52fc0-f706-4790-a478-f8dd7d9880a2" />
+          <factory-entry name="entityManagerFactory" value="39a2231d-505d-4058-ab8b-8dd0c1839eb4" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
